@@ -13,8 +13,13 @@ public class Shipment {
 		
 		List<Widget> widgetList = WidgetUtils.getSampleWidgets();
 		Collections.sort(widgetList, new SortByColor());
+		int count = 1;
 		for(Widget widget : widgetList){
 			System.out.println(widget.getSerialNumber()+ "\t"+ widget.getColor()+ "\t"+ widget.getProductionDate());
+			count++;
+			if (count > 10) {
+				break;
+			}
 		}
 		
 		//Sort By Production Date :
@@ -23,8 +28,13 @@ public class Shipment {
 		
 		List<Widget> widgetList1 = WidgetUtils.getSampleWidgets();
 		Collections.sort(widgetList1, new SortByDate());
-		for(Widget widget : widgetList){
-			System.out.println(widget.getSerialNumber()+ "\t"+ widget.getColor()+ "\t"+ widget.getProductionDate());
+		count = 1 ;
+		for (Widget widget : widgetList) {
+			System.out.println(widget.getSerialNumber() + "\t" + widget.getColor() + "\t" + widget.getProductionDate());
+			count++;
+			if (count > 10) {
+				break;
+			}
 		}
 	}
 	
